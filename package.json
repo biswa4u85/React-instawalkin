@@ -1,26 +1,15 @@
 {
-  "name": "bootstrap4-react-app",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "bootstrap": "^4.1.0",
-    "node-sass-chokidar": "^1.2.2",
-    "npm-run-all": "^4.1.3",
-    "react": "^16.3.2",
-    "react-bootstrap": "^0.32.1",
-    "react-dom": "^16.3.2",
-    "react-icons": "^2.2.7",
-    "react-scripts": "1.1.4",
-    "reactstrap": "^6.0.1",
-    "redux-form": "^7.3.0"
-  },
+  "name": "gurb",
+  "version": "1.0.0",
+  "description": "Use Sass with gurb, Node Script in SCSS flavour.",
   "scripts": {
-    "build-css": "node-sass-chokidar --include-path ./src/styles --include-path ./node_modules src/styles/ -o src/styles/",
-    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src/styles --include-path ./node_modules src/styles/ -o src/styles --watch --recursive",
-    "start-js": "react-scripts start",
-    "start": "npm-run-all -p watch-css start-js",
-    "build": "npm run build-css && react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "css": "node-sass --output-style compressed --include-path scss src/style.scss style.css",
+    "watch": "nodemon -e scss -x \"npm run css\""
+  },
+  "author": "ibubble",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.5.3",
+    "nodemon": "^1.11.0"
   }
 }
