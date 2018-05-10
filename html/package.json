@@ -1,0 +1,15 @@
+{
+  "name": "gurb",
+  "version": "1.0.0",
+  "description": "Use Sass with gurb, Node Script in SCSS flavour.",
+  "scripts": {
+    "css": "node-sass --output-style compressed --include-path scss src/style.scss style.css",
+    "watch": "nodemon -e scss -x \"npm run css\""
+  },
+  "author": "ibubble",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.5.3",
+    "nodemon": "^1.11.0"
+  }
+}
