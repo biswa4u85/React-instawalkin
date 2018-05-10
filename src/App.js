@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import * as FontAwesome from 'react-icons/lib/fa';
+import { Collapse, Button } from 'reactstrap';
 import topLogo from './images/top-logo.png';
 import headerImg from './images/header-img.png';
 import formHeaderLogo from './images/form-header-logo.jpg';
@@ -12,9 +13,20 @@ import bottomLogo from './images/bottom-logo.png';
 import fbIcon from './images/fb-icon.png';
 import twitIcon from './images/twit-icon.png';
 import instaIcon from './images/insta-icon.png';
-// import PartnerFrom from './PartnerForm';
+import PartnerFrom from './PartnerForm';
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.toggle = this.toggle.bind(this);
+    this.state = { collapse: false };
+  }
+
+  toggle() {
+    this.setState({ collapse: !this.state.collapse });
+  }
+
   render() {
     return (
       <div>
@@ -27,35 +39,35 @@ class App extends Component {
               <div className="col-sm-3 col-12">
                 <button className="buttonBg contUsButt">PARTNER SIGN IN</button>
                 <button className="buttonBg contUsButt">BECOME A PARTNER</button>
-                <button type="button" className="hambtn navbar-toggler noPadding" name="button" data-toggle="collapse" data-target="#navbarCollapse"
-                  aria-expanded="true">
-                  <FontAwesome.FaAlignJustify />
-                </button>
+                <Button color="primary" onClick={this.toggle} style={{ marginBottom: '1rem' }}><FontAwesome.FaAlignJustify /></Button>
+                <Collapse isOpen={this.state.collapse}>
+                  <div className="row">
+                    <div className="col-sm-12">
+                      <div className="navbar-collapse">
+                        <ul className="navbar-nav foot-navs ml-auto text-center">
+                          <li className="nav-item">
+                            <a className="nav-link">Download Apps</a>
+                          </li>
+                          <li className="nav-item">
+                            <a className="nav-link">Contact Us</a>
+                          </li>
+                          <li className="nav-item">
+                            <a className="nav-link">Privacy Policy</a>
+                          </li>
+                          <li className="nav-item">
+                            <a className="nav-link">Teams &amp; conditions</a>
+                          </li>
+                          <li className="nav-item">
+                            <a className="nav-link">FAQ</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </Collapse>
               </div>
             </div>
-            <div className="row">
-              <div className="col-sm-12">
-                <div className="navbar-collapse collapse" id="navbarCollapse">
-                  <ul className="navbar-nav foot-navs ml-auto text-center">
-                    <li className="nav-item">
-                      <a className="nav-link">Download Apps</a>
-                    </li>
-                    <li className="nav-item">
-                      <a className="nav-link">Contact Us</a>
-                    </li>
-                    <li className="nav-item">
-                      <a className="nav-link">Privacy Policy</a>
-                    </li>
-                    <li className="nav-item">
-                      <a className="nav-link">Teams &amp; conditions</a>
-                    </li>
-                    <li className="nav-item">
-                      <a className="nav-link">FAQ</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
         <div className="container-fluid">
@@ -175,7 +187,7 @@ class App extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </div >
     );
   }
 }

@@ -4,9 +4,9 @@ import React, {
 import { Button, Form, FormGroup, Label, Input, FormText, Valid, FormFeedback } from 'reactstrap';
 import * as httprequest from '../axiosrequests/httprequests';
 import ReactDOM from 'react-dom';
-import * as validate from '../validation/formvalidation.js'
+import * as validate from './validation/formvalidation.js'
 import ModalForms from './ModalForms';
-import DisappearingModal from '../Modal/DisappearingModal';
+import DisappearingModal from './Modal/DisappearingModal';
 
 export default class PartnerFrom extends Component {
   constructor() {
