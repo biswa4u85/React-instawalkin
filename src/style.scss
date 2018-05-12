@@ -38,7 +38,6 @@ button:focus{
 }
 .contUsButt{    
     margin: 7px 17px 0 0;
-    float:left;
     @media screen and (max-width:414px) {
         float:left;
         margin: 7px 8px 0 0;
@@ -72,10 +71,14 @@ button:focus{
                 padding:0 0 20px 0;
             }
         }
+        .mMenu{
+            text-align: right;
+        }
     }
 }
 .contentArea{
     margin: 0 3%;
+    position: relative;
 }
 .sliderImg{
     position:relative;
@@ -114,13 +117,18 @@ button:focus{
         .getstart{
             display:block;
             h3{
-                font-size: 18px;
+                font-size: 14px;
                 color: #9a9a9a;
                 text-align: center;
             }
+            .form-control{
+                border-color: #bf6472;
+                border-radius: 0;
+                margin: 0;
+            }
             .form-control.is-valid{
                 border-color: #bf6472;
-                font-size: 16px;
+                // font-size: 16px;
                 border-radius: 0;
                 margin: 0;
             }
@@ -275,7 +283,8 @@ button:focus{
     border-radius: .25rem!important;
     padding-top: 7px!important;
     color: #c4384c;  
-    float:left;
+    float: right;
+    margin-right: 30px;
 }
 .collapse.show {
     display: block;
@@ -318,4 +327,61 @@ button:focus{
 .navbar .foot-navs .nav-item a {
     color: #919191;
     font-weight: bold;
+}
+
+.navbarbar{
+    position: absolute;
+    background: #eee;
+    z-index: 999;
+    padding: 10px;
+    right: 25px;
+    ul.navbar-nav{
+        display:block !important;
+        li{
+            display: block;
+            padding: 0;
+        }
+    }
+    .buttonBg{
+        display: none;
+    }
+}
+
+@media screen and (max-width:575px) {
+    .logo, 
+    .phoneImg, 
+    .storeImg, 
+    .appBg .titletxt,
+    .socialBg .socialArea {
+        text-align: center;
+    }
+    .mMenu .hambtn{
+        float: right;
+    }
+    .buttonBg{
+        display: none;
+    }
+    .navbarbar .buttonBg{
+        display: block;
+    }
+    .sliderImg .sliderTxt{
+        text-align: center;
+        width: 100%;
+        left: inherit;
+    }
+    .contentBox {
+        width: inherit;
+        margin: 0 auto 15px auto;
+    }
+    .formBox {
+        width: inherit;
+        margin: 15px auto!important;
+    }
+    .appBg .titletxt{
+        margin: 0;
+    }
+    .storeImg{
+        margin: 20px 0;
+    }
+   
 }
