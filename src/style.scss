@@ -1,7 +1,7 @@
 body{
     margin:0;
     padding:0;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Hind Guntur', sans-serif;
     background: #FBFBFB;
 }
 
@@ -9,7 +9,9 @@ img{
     max-width: 100%;
     height: auto;
 }
-
+.clearfix{
+    clear: both;
+}
 .scrollbar{	
 	height:67vh;	
 	overflow-y: scroll;	
@@ -82,6 +84,13 @@ button:focus{
 }
 .sliderImg{
     position:relative;
+    background: url('images/header-img.png') left top no-repeat;
+    background-size: 100% 96%;
+    min-height: 580px;
+    img{
+        width: 100%;
+        height: auto;
+    }
     .sliderTxt{
         position: absolute;
         left: 31%;
@@ -105,8 +114,7 @@ button:focus{
     }
 }
 .contentBox{    
-    width:88%;
-    margin: 30px auto 50px;
+    margin: 30px auto;
     display: block;
     @media screen and (max-width:414px) {
         width:100%;
@@ -166,15 +174,15 @@ button:focus{
 }
    
        .formBox{
-           width:70%;
+           width:85%;
            margin-top:30px;
            margin-left: auto;
            margin-right: auto;
            display: block;
-           min-height: 520px;
+           min-height: inherit;
            @media screen and (max-width:414px) {
             width:100%;
-            min-height: 350px;
+            min-height: inherit;
            }
        }
    
@@ -284,7 +292,6 @@ button:focus{
     padding-top: 7px!important;
     color: #c4384c;  
     float: right;
-    margin-right: 30px;
 }
 .collapse.show {
     display: block;
@@ -330,11 +337,9 @@ button:focus{
 }
 
 .navbarbar{
-    position: absolute;
     background: #eee;
     z-index: 999;
     padding: 10px;
-    right: 25px;
     ul.navbar-nav{
         display:block !important;
         li{
@@ -347,8 +352,7 @@ button:focus{
     }
 }
 
-@media screen and (max-width:575px) {
-    .logo, 
+@media screen and (max-width:860px) {
     .phoneImg, 
     .storeImg, 
     .appBg .titletxt,
@@ -361,13 +365,21 @@ button:focus{
     .buttonBg{
         display: none;
     }
-    .navbarbar .buttonBg{
-        display: block;
-    }
-    .sliderImg .sliderTxt{
+    .navbarbar {
         text-align: center;
-        width: 100%;
-        left: inherit;
+        .buttonBg{
+            display: block;
+            margin: 5px auto;
+            float: none;
+        }
+    }
+    .sliderImg {
+        min-height: 550px!important;
+        .sliderTxt{
+            text-align: center;
+            width: 100%;
+            left: inherit;
+        }
     }
     .contentBox {
         width: inherit;
@@ -376,6 +388,7 @@ button:focus{
     .formBox {
         width: inherit;
         margin: 15px auto!important;
+        min-height: inherit;
     }
     .appBg .titletxt{
         margin: 0;
@@ -384,4 +397,14 @@ button:focus{
         margin: 20px 0;
     }
    
+}
+@media screen and (max-width:650px) {
+    .socialBg .socialArea .titleTxt {
+        font-size: 27px;
+    }
+    .socielIcons{
+        padding: 8px 0;
+        width: 32%;
+        display: inline-block;        
+    }
 }
