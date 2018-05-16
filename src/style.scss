@@ -83,12 +83,10 @@ button:focus{
     position: relative;
 }
 .sliderImg{
-    position:relative;
-    background: url('images/header-img.png') left top no-repeat;
-    background-size: 100% 96%;
-    min-height: 580px;
+    position:relative!important;
+    padding-left:2.9%!important;
     img{
-        width: 100%;
+        // width: 100%;
         height: auto;
     }
     .sliderTxt{
@@ -374,7 +372,7 @@ button:focus{
         }
     }
     .sliderImg {
-        min-height: 550px!important;
+        // min-height: 550px!important;        
         .sliderTxt{
             text-align: center;
             width: 100%;
